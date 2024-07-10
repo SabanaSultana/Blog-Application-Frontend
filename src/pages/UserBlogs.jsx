@@ -12,7 +12,7 @@ const UserBlogs = () => {
     try {
       const id = localStorage.getItem("userId");
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/blog/user-blog/${id}`
+        `https://blog-application-backend-qcmt.onrender.com/api/v1/blog/user-blog/${id}`
       );
       console.log(data); 
       if (data?.success) {

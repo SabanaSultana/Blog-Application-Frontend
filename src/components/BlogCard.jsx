@@ -29,7 +29,9 @@ export default function BlogCard({
 
   const handleDelete = async () => {
     try {
-      const { data } = await axios.delete(`http://localhost:8080/api/v1/blog/delete-blog/${id}`);
+      const { data } = await axios.delete(
+        `https://blog-application-backend-qcmt.onrender.com/api/v1/blog/delete-blog/${id}`
+      );
       if (data?.success) {
         alert("Blog Deleted");
         window.location.reload();
